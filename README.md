@@ -14,6 +14,7 @@ Por fim o Google irá fornecer uma senha de autenticação para usar no envio do
 <hr>
 
 ## Outlook
+Desbloquer o envio fora do aplicativo oficial (https://outlook.live.com).
 
  - Configurações;
  - Exibir todas as configurações do Outlook;
@@ -26,22 +27,22 @@ A partir desse ponto o Outlook não deverá mais bloquear o envio dos e-mails pe
 
 <hr>
 
-### Outlook ##
-Host: smtp.office365.com
-Secure: TLS
-Port: 587
+### Outlook
+ - Host: smtp.office365.com
+ - Secure: TLS
+ - Port: 587
 
-### Gmail ##
-Host: smtp.gmail.com
-Secure: SMTPS
-Port: 465
+### Gmail
+ - Host: smtp.gmail.com
+ - Secure: SMTPS
+ - Port: 465
 
-### Locaweb (default) ##
-Host: email-ssl.com.br
-Secure: SMTPS
-Port: 465
+### Locaweb (default)
+ - Host: email-ssl.com.br
+ - Secure: SMTPS
+ - Port: 465
 
-## Locaweb (grandes volumes de e-mail) ##
-Host: smtplw.com.br
-Secure: TLS
-Port: 587
+### Locaweb (grandes volumes de e-mail)
+ - Host: smtplw.com.br
+ - Secure: TLS
+ - Port: 587
