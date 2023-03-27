@@ -7,7 +7,7 @@ Ativar Gmail para acessar a partir de outros programas (https://mail.google.com)
  - E depois "Senhas de app";
  - Cadastre o app para gerar a senha:
 	Preencha: "E-mail" em "Selecionar app" e "Outros" em "Selecionar dispositivo";
-	Digite uma identificação para essa senha, exemplo: "SIGS";
+	Digite uma identificação para essa senha, exemplo: "SIGS".
 
 Por fim o Google irá fornecer uma senha de autenticação para usar no envio dos e-mails fora de suas aplicações tradicionais.
 
@@ -21,7 +21,7 @@ Desbloquer o envio fora do aplicativo oficial (https://outlook.live.com).
  - Premium -> Segurança 
  - Segurança da conta: Veja suas atividades recentes para garantir que você é a única pessoa que está entrando na sua conta ;
  - Clique em ["Exibir"];
- - Identifique a atividade (a tentativa de envio) e confirme em ["Fui eu"];
+ - Identifique a atividade (a tentativa de envio) e confirme em ["Fui eu"].
 
 A partir desse ponto o Outlook não deverá mais bloquear o envio dos e-mails pelo SIGS.
 
