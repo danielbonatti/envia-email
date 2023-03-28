@@ -23,6 +23,11 @@ Desbloquer o envio fora do aplicativo oficial (https://outlook.live.com).
  - Clique em ["Exibir"];
  - Identifique a atividade (a tentativa de envio) e confirme em ["Fui eu"].
 
+ ou
+
+ - https://account.live.com/activity
+ - Identifique a atividade (a tentativa de envio) e confirme em ["Fui eu"].
+
 A partir desse ponto o Outlook não deverá mais bloquear o envio dos e-mails pelo SIGS.
 
 <hr>
