@@ -4,3 +4,5 @@ curl -d '{"host":"smtp.office365.com","user":"bonattidaniel@hotmail.com","passwo
 // gmail
 curl -d '{"host":"smtp.gmail.com","user":"danielcarlosbonatti@gmail.com","password":"ayiwbownsswqptuz","secure":"SMTPS","port":465,"name":"Bonatti","addres":[{"email":"daniel@hsist.com.br"}],"html":true,"content":{"subject":"assunto","body":"corpo","altbody":"corpo alternativo"}}' -H 'Content-Type: application/json' http://127.0.0.1/envia-email/index.php
 
+// upload file
+curl -F file=@teste.txt http://localhost/envia-email/upload.php
