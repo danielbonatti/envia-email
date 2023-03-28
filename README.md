@@ -46,3 +46,11 @@ A partir desse ponto o Outlook não deverá mais bloquear o envio dos e-mails pe
  - Host: smtplw.com.br
  - Secure: TLS
  - Port: 587
+
+ <hr>
+
+ ## Observação
+Após a instalação deste serviço é necessário conceder autorização de leitura, escrita e execução para o diretório:
+´´´
+chmod -R 777 /var/www/html/envia-email/attachments
+´´´  
