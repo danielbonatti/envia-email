@@ -76,6 +76,10 @@
             $mail->AltBody = $jsonBody['content']['altbody'];       // Texto limpo, sem html (evita que a msg caia em spam)
         
             $mail->send();
+            // Apaga o anexo após o envio
+            if(isset($jsonBody['attachment'])){
+                unlink("attachments/".$jsonBody['attachment']);
+            }
             echo json_encode($result);
 
         } catch (Exception $e) {

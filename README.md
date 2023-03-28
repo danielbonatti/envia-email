@@ -50,7 +50,7 @@ A partir desse ponto o Outlook não deverá mais bloquear o envio dos e-mails pe
  <hr>
 
  ## Observação
-Após a instalação deste serviço é necessário conceder autorização de escrita para 'outros' no diretório attachments (anexos):
+Após a instalação deste serviço é necessário conceder autorização de leitura, escrita e execução para 'outros' no diretório attachments (anexos):
 ```
 chmod -R 772 /var/www/html/envia-email/attachments
 ```
