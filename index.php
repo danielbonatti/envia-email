@@ -59,6 +59,9 @@
             $mail->addBCC('bcc@example.com');                       // Cópia oculta*/
 
             // Attachments
+            if(isset($jsonBody['attachment'])){
+                $mail->addAttachment("attachments/".$jsonBody['attachment']);
+            }
             /*
             $mail->addAttachment('/var/tmp/file.tar.gz');           // Add attachments
             $mail->addAttachment('/tmp/image.jpg', 'new.jpg');      // Optional name
