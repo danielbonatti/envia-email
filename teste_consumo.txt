@@ -1,8 +1,8 @@
 // outlook / hotmail
-curl -d '{"host":"smtp.office365.com","user":"bonattidaniel@hotmail.com","password":"anamaria271989","secure":"TLS","port":587,"name":"Bonatti","addres":[{"email":"daniel@hsist.com.br"},{"email":"bonattidaniel@hotmail.com"},{"email":"danielcarlosbonatti@gmail.com"}],"html":true,"content":{"subject":"assunto","body":"corpo","altbody":"corpo alternativo"}}' -H 'Content-Type: application/json' http://127.0.0.1/envia-email/index.php
+curl -d '{"host":"smtp.office365.com","user":"bonattidaniel@hotmail.com","password":"","secure":"TLS","port":587,"name":"Bonatti","addres":[{"email":"daniel@hsist.com.br"},{"email":"bonattidaniel@hotmail.com"},{"email":"danielcarlosbonatti@gmail.com"}],"html":true,"content":{"subject":"assunto","body":"corpo","altbody":"corpo alternativo"}}' -H 'Content-Type: application/json' http://127.0.0.1/envia-email/
 
 // gmail
-curl -d '{"host":"smtp.gmail.com","user":"danielcarlosbonatti@gmail.com","password":"ayiwbownsswqptuz","secure":"SMTPS","port":465,"name":"Bonatti","addres":[{"email":"daniel@hsist.com.br"}],"html":true,"content":{"subject":"assunto","body":"corpo","altbody":"corpo alternativo"},"attachment":"teste.txt"}' -H 'Content-Type: application/json' http://127.0.0.1/envia-email/index.php
+curl -d '{"host":"smtp.gmail.com","user":"danielcarlosbonatti@gmail.com","password":"","secure":"SMTPS","port":465,"name":"Bonatti","addres":[{"email":"daniel@hsist.com.br"}],"html":true,"content":{"subject":"assunto","body":"corpo","altbody":"corpo alternativo"},"attachment":"teste.txt"}' -H 'Content-Type: application/json' http://127.0.0.1/envia-email/
 
 // upload file
-curl -F file=@teste.txt http://localhost/envia-email/upload.php
+curl -F file=@teste.txt http://localhost/envia-email/upload/

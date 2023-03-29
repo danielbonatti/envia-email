@@ -6,6 +6,8 @@
 
     // Carrega Composer's autoloader
     require 'vendor/autoload.php';
+    // Carrega função para excluir anexos
+    require "unlinkRecursive.php";
 
     // ======================================
     
@@ -78,7 +80,8 @@
             $mail->send();
             // Apaga o anexo após o envio
             if(isset($jsonBody['attachment'])){
-                unlink("attachments/".$jsonBody['attachment']);
+                //unlink("attachments/".$jsonBody['attachment']);
+                unlinkRecursive('attachments',false);
             }
             echo json_encode($result);
 
