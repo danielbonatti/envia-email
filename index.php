@@ -7,7 +7,7 @@
     // Carrega Composer's autoloader
     require 'vendor/autoload.php';
     // Carrega função para excluir anexos
-    require "unlinkRecursive.php";
+    require "helpers/unlinkRecursive.php";
 
     // ======================================
     
