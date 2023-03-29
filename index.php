@@ -7,7 +7,7 @@
     // Carrega Composer's autoloader
     require 'vendor/autoload.php';
     // Carrega função para excluir anexos
-    require "helpers/unlinkRecursive.php";
+    //require "helpers/unlinkRecursive.php";
 
     // ======================================
     
@@ -50,8 +50,8 @@
 
             // -----------------------------------------------
 
-            foreach($jsonBody['addres'] as $item) {
-                $mail->addAddress($item['email']);                  // Quem recebe
+            foreach($jsonBody['addres'] as $email) {
+                $mail->addAddress($email['email']);                  // Quem recebe
             }
 
             /*
@@ -62,7 +62,10 @@
 
             // Attachments
             if(isset($jsonBody['attachment'])){
-                $mail->addAttachment("attachments/".$jsonBody['attachment']);
+                foreach($jsonBody['attachment'] as $file) {
+                    $mail->addAttachment("attachments/".$file['file']);
+                }
+                //$mail->addAttachment("attachments/".$jsonBody['attachment']);
             }
             /*
             $mail->addAttachment('/var/tmp/file.tar.gz');           // Add attachments
@@ -78,11 +81,16 @@
             $mail->AltBody = $jsonBody['content']['altbody'];       // Texto limpo, sem html (evita que a msg caia em spam)
         
             $mail->send();
-            // Apaga o anexo após o envio
+
             if(isset($jsonBody['attachment'])){
-                //unlink("attachments/".$jsonBody['attachment']);
-                unlinkRecursive('attachments',false);
+                // Apaga todos os arquivos do diretório
+                //unlinkRecursive('attachments',false);
+                foreach($jsonBody['attachment'] as $file) {
+                    // Apaga o anexo após o envio
+                    unlink("attachments/".$file['file']);
+                }
             }
+
             echo json_encode($result);
 
         } catch (Exception $e) {
